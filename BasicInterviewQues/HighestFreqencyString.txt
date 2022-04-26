@@ -1,0 +1,29 @@
+T(n) = O(n)
+
+As it depends upon the length of string not on the length of array.
+ Length of array remains constant.
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+     String str = sc.next();
+     
+     int [] farr = new int[26];
+     for ( int i = 0 ; i < str.length() ; i++){
+         char ch = str.charAt(i);
+         int idx = ch - 'a';
+         farr[idx]++;
+     }
+     int maxIdx = 0;
+     for ( int i = 1 ; i < farr.length ; i++){
+         if ( farr[i] > farr[ maxIdx]){
+             maxIdx =  i ;
+         }
+     }
+      char maxFreChar = (char)(maxIdx + 'a');
+      System.out.println(maxFreChar);
+     
+    }
+}
+

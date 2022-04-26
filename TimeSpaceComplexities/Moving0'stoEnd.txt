@@ -1,0 +1,25 @@
+import java.util.*;
+class Main {
+	public static void main(String args[]) {
+		// Your code goes here
+		int[]  arr = { 9 , 5, 0 ,4,8,2,0,3,0,6};
+		int i = 0 ; 
+		int j = 0 ;
+
+		while ( i < arr.length){
+			if ( arr[i] == 0){
+				i++;
+			} else {
+				int temp = arr[i];
+				arr[i] = arr[j] ;
+				arr[j] = temp;
+				i++;
+				j++;
+			}
+		}
+		
+		for ( int k = 0 ; k < arr.length ; k++){
+			System.out.println(arr[k]);
+		}
+}
+}

@@ -1,0 +1,42 @@
+// Reverse a string 
+
+import java.util.*;
+class Main{
+
+	public static void main(String[] args){
+		String str = "Geeks" ;
+		String nstr ="";
+		char ch;
+		for ( int i = 0 ; i < str.length() ; i++){
+			ch = str.charAt(i);
+			nstr = ch + nstr ;
+			
+		}
+		System.out.println(nstr);
+
+	}
+}
+
+// Reverse a string using recursion
+
+import java.util.*;
+public class Main{
+	static void reverse(String str){
+		if((str == null) || (str.length() <= 1)){
+			System.out.println(str);
+		} else {
+			System.out.print(str.charAt(str.length() -1));
+			reverse(str.substring(0 , str.length()-1));
+		}
+	}
+	public static void main(String[] args){
+		Scanner sc = new Scanner(System.in);
+		String str = sc.nextLine();
+		System.out.println("The reverse:");
+		reverse(str);
+	}
+
+}
+
+
+

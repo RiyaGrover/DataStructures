@@ -1,0 +1,23 @@
+// Time complexity : O(n)
+
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+     Scanner sc = new Scanner(System.in);
+      int x = sc.nextInt();
+      int n = sc.nextInt();
+      int c = n;
+      int power = x ; 
+      int ans = 0 ;
+      
+      while ( c >= 1){
+          int term = c * power ;
+          ans = ans + term ; 
+          c--;
+          power = power * x; 
+         
+          
+      }
+       System.out.println( ans);
+    }
+}
