@@ -1,0 +1,28 @@
+/* package whatever; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class digitCounter
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc = new Scanner(System.in);
+		int num = sc.nextInt();
+		getDigitCount(num);
+	}
+
+	private static int getDigitCount(int number) {
+		// your code goes here
+		int count = 0;
+		while(number != 0){
+			number /= 10;
+			++count;
+		}
+		System.out.println(count);
+		return count;
+		
+	}
+}
